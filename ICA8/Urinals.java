@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-public class Main {
+public class Urinals {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String s;
@@ -9,6 +9,23 @@ public class Main {
         int output= countUrinals(s);
         System.out.println(output);
     }
+    public static boolean goodString( String str )
+    {  // checks to see if valid string
+        boolean gs=false;
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)=='0'||str.charAt(i)=='1')
+            {
+                gs=true;
+            }
+            else {
+                gs=false;
+            }
+        }
+        return gs;
+    }
+
+
     public static int countUrinals(String s) {
 
         int czero = 0, cone=0,count = 0;
