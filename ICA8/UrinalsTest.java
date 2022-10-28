@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
-    Main m = new Main();
+class UrinalsTest {
+    Urinals m = new Urinals();
 
     @Test
     void main() {
@@ -19,5 +19,13 @@ class MainTest {
         assertEquals(2,m.countUrinals("0000"));
         assertEquals(1,m.countUrinals("01000"));
         assertEquals(-1,m.countUrinals("011"));
+    }
+
+    @Test
+    void goodString() {
+        assertEquals(true,m.goodString("0101"));
+        assertEquals(false,m.goodString("0171"));
+        assertEquals(true,m.goodString("00000"));
+
     }
 }
